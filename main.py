@@ -1,6 +1,8 @@
 from flask import Flask,render_template,flash,redirect,url_for,request
 from forms import *
 from bson import ObjectId
+import pymongo
+from mongoConnect import getClient
 '''
 import secrets
 secrets.token_hex(16)
@@ -8,8 +10,7 @@ secrets.token_hex(16)
 app = Flask(__name__)
 app.config['SECRET_KEY']='a6117d75525f998d655339b828aa727e'
 
-import pymongo
-myclient = pymongo.MongoClient("mongodb://172.17.0.2:27017/")
+myclient = getClient()
 db = myclient['hospitalDb']
 
 
