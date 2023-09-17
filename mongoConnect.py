@@ -1,3 +1,3 @@
 import pymongo
 def getClient():
-    return pymongo.MongoClient("mongodb://172.17.0.2:27017/")
+    return pymongo.MongoClient("mongodb://localhost:27017/")
